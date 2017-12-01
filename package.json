@@ -1,0 +1,38 @@
+{
+  "name": "cwb-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cettoana/cwb-graphql.git",
+  "author": "Hau Chen <cettoana@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "xo",
+    "watch": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.11.7",
+    "ramda": "^0.25.0",
+    "xml-js": "^1.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "space": true,
+    "rules": {
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ]
+    }
+  }
+}
