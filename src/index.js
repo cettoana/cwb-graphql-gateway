@@ -4,6 +4,7 @@ const { renderGraphiQL } = require('express-graphql/dist/renderGraphiQL');
 const schema = require('./graphql/schema');
 
 const app = express();
+const port = process.env.PORT || 4000;
 
 app.get(
   '/graphiql',
@@ -47,6 +48,6 @@ app.use(
   }),
 );
 
-app.listen(4000, () => {
-  console.log('GraphQL Server Running at http://127.0.0.1:4000');
+app.listen(port, () => {
+  console.log(`GraphQL Server Running at http://127.0.0.1:${port}`);
 });

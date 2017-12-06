@@ -4,6 +4,10 @@
 
 In order to get data from CWB(Central Weather Bureau), we need to get **authorization key** from [here](https://opendata.cwb.gov.tw/usages)
 
+## DEMO
+
+[GraphiQL](https://cwb-graphql-gateway.herokuapp.com/graphiql)
+
 ## Developement
 
 ### Requirements
