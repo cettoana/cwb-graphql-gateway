@@ -1,8 +1,14 @@
-# Central Weather Bureau Open Data (中央氣象局氣象資料開放平臺) GraphQL API Gateway
+# CWB Open Data GraphQL API Gateway
+
+[![Build Status](https://travis-ci.org/cettoana/cwb-graphql-gateway.svg?branch=master)](https://travis-ci.org/cettoana/cwb-graphql-gateway)
+[![Heroku](http://heroku-badge.herokuapp.com/?app=cwb-graphql-gateway&style=flat&svg=1&root=graphiql)](https://cwb-graphql-gateway.herokuapp.com/graphiql)
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+
+[Central Weather Bureau Open Data](https://opendata.cwb.gov.tw/index) (中央氣象局氣象資料開放平臺) GraphQL API Gateway
 
 ## Authorization Key
 
-In order to get data from CWB(Central Weather Bureau), we need to get **authorization key** from [here](https://opendata.cwb.gov.tw/usages)
+In order to get data we need to sign up for Central Weather Bureau and sign in to get the **authorization key** from [here](https://opendata.cwb.gov.tw/usages)
 
 ## DEMO
 
