@@ -26,6 +26,13 @@ app.get(
     stationName: $stationName,
     stationID: $stationID,
   )
+  rainfall(
+    authorizationKey: $authorizationKey,
+    city: $city,
+    town: $town,
+    stationName: $stationName,
+    stationID: $stationID,
+  )
 }`,
       variables: {
         authorizationKey: 'your-cwb-authorizationkey-here',
