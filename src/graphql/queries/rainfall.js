@@ -3,12 +3,13 @@ const {
   GraphQLString,
 } = require('graphql');
 
-const ObserveType = require('../types/observe');
-const ObservesResolver = require('../resolvers/observes');
+const RainfallType = require('../types/rainfall');
+const RainfallResolver = require('../resolvers/rainfall');
 
-const observes = {
-  type: new GraphQLList(ObserveType),
-  resolve: ObservesResolver,
+const rainfall = {
+  type: new GraphQLList(RainfallType),
+  description: 'Rainfall data from observatories in Taiwan. Data ID O-A0002-001',
+  resolve: RainfallResolver,
   args: {
     authorizationKey: {
       type: GraphQLString,
@@ -28,4 +29,4 @@ const observes = {
   },
 };
 
-module.exports = observes;
+module.exports = rainfall;

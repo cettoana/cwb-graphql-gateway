@@ -19,7 +19,14 @@ app.get(
   $stationName: String,
   $stationID: String,
 ) {
-  observes(
+  observations(
+    authorizationKey: $authorizationKey,
+    city: $city,
+    town: $town,
+    stationName: $stationName,
+    stationID: $stationID,
+  )
+  rainfall(
     authorizationKey: $authorizationKey,
     city: $city,
     town: $town,
