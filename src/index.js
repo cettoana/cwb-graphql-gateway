@@ -19,7 +19,7 @@ app.get(
   $stationName: String,
   $stationID: String,
 ) {
-  observes(
+  observations(
     authorizationKey: $authorizationKey,
     city: $city,
     town: $town,

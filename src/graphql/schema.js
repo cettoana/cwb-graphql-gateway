@@ -3,14 +3,14 @@ const {
   GraphQLSchema,
 } = require('graphql');
 
-const ObservesQuery = require('./queries/observes');
+const ObservationsQuery = require('./queries/observations');
 const RainfallQuery = require('./queries/rainfall');
 
 const schema = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: 'Query',
     fields: {
-      observes: ObservesQuery,
+      observations: ObservationsQuery,
       rainfall: RainfallQuery,
     },
   }),

@@ -2,7 +2,9 @@ const axios = require('axios');
 const R = require('ramda');
 const convert = require('xml-js');
 
-const observesResolver = (parent, { stationName, stationID, city, town, authorizationKey }) => {
+const handleElement = R.when(R.equals('-99'), R.always(null));
+
+const observationsResolver = (parent, { stationName, stationID, city, town, authorizationKey }) => {
   return axios.get('http://opendata.cwb.gov.tw/opendataapi', {
     params: {
       dataid: 'O-A0001-001',
@@ -20,7 +22,7 @@ const observesResolver = (parent, { stationName, stationID, city, town, authoriz
       R.map(l => {
         const elements = l.weatherElement.reduce((prev, curr) => R.assoc(
           curr.elementName._text,
-          curr.elementValue.value._text === '-99' ? null : curr.elementValue.value._text,
+          curr.elementValue.value._text,
           prev,
         ), {});
 
@@ -36,21 +38,21 @@ const observesResolver = (parent, { stationName, stationID, city, town, authoriz
           longitude: l.lon._text,
           latitude: l.lat._text,
           observeTime: l.time.obsTime._text,
-          altitude: elements.ELEV,
-          windDirection: elements.WDIR,
-          windSpeed: elements.WDSD,
-          temperature: elements.TEMP,
-          humidity: elements.HUMD,
-          pressure: elements.PRES,
-          sunshine: elements.SUN,
-          dayCumulativeRainfall: elements.H_24R,
-          hourFX: elements.H_FX,
-          hourXD: elements.H_XD,
-          hourFXT: elements.H_FXT,
+          altitude: handleElement(elements.ELEV),
+          windDir: handleElement(elements.WDIR),
+          windSpeed: handleElement(elements.WDSD),
+          temperature: handleElement(elements.TEMP),
+          humidity: handleElement(elements.HUMD),
+          pressure: handleElement(elements.PRES),
+          sunshine: handleElement(elements.SUN),
+          cumRain24Hour: handleElement(elements.H_24R),
+          maxGustLastHour: handleElement(elements.H_FX),
+          maxGustDirLastHour: handleElement(elements.H_XD),
+          maxGustTimeLastHour: handleElement(elements.H_FXT),
           city: parameters.CITY,
-          citySerialNumber: parameters.CITY_SN,
+          citySN: parameters.CITY_SN,
           town: parameters.TOWN,
-          townSerialNumber: parameters.TOWN_SN,
+          townSN: parameters.TOWN_SN,
         };
       })
     )(data);
@@ -75,4 +77,4 @@ const observesResolver = (parent, { stationName, stationID, city, town, authoriz
   });
 };
 
-module.exports = observesResolver;
+module.exports = observationsResolver;
