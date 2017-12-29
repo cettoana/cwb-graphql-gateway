@@ -21,6 +21,10 @@ In order to get data we need to sign up for Central Weather Bureau and sign in t
 
 [GraphiQL](https://cwb-graphql-gateway.herokuapp.com/graphiql)
 
+## Deploy
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ## Developement
 
 ### Requirements
