@@ -1,0 +1,9 @@
+{
+  "name": "CWB GraphQL Gateway",
+  "repository": "https://github.com/cettoana/cwb-graphql-gateway",
+  "success_url": "/graphiql",
+  "keywords": [
+    "Node.js",
+    "GraphQL"
+  ]
+}
