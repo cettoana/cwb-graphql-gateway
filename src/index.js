@@ -6,13 +6,11 @@ const schema = require('./graphql/schema');
 const app = express();
 const port = process.env.PORT || 4000;
 
-app.get(
-  '/graphiql',
-  (req, res) => res.send(
+app.get('/graphiql', (req, res) =>
+  res.send(
     renderGraphiQL({
       // Default Query
-      query:
-`query CwbQuery(
+      query: `query CwbQuery(
   $authorizationKey: String!,
   $city: String,
   $town: String,
@@ -43,16 +41,13 @@ app.get(
   )
 );
 
-app.post(
-  '/graphiql',
-  (req, res) => res.redirect(307, '/graphql'),
-);
+app.post('/graphiql', (req, res) => res.redirect(307, '/graphql'));
 
 app.use(
   '/graphql',
   graphqlHTTP({
     schema,
-  }),
+  })
 );
 
 app.listen(port, () => {

@@ -1,7 +1,4 @@
-const {
-  GraphQLObjectType,
-  GraphQLSchema,
-} = require('graphql');
+const { GraphQLObjectType, GraphQLSchema } = require('graphql');
 
 const ObservationsQuery = require('./queries/observations');
 const RainfallQuery = require('./queries/rainfall');

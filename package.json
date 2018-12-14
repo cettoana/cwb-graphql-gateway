@@ -10,6 +10,21 @@
     "watch": "nodemon src/index.js",
     "start": "node src/index.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "singleQuote": true
+  },
   "dependencies": {
     "axios": "^0.17.1",
     "express": "^4.16.2",
@@ -19,7 +34,10 @@
     "xml-js": "^1.5.2"
   },
   "devDependencies": {
+    "husky": "^1.2.1",
+    "lint-staged": "^8.1.0",
     "nodemon": "^1.12.1",
+    "prettier": "^1.15.3",
     "xo": "^0.18.2"
   },
   "xo": {
