@@ -4,7 +4,7 @@
 [![Heroku](http://heroku-badge.herokuapp.com/?app=cwb-graphql-gateway&style=flat&svg=1&root=graphiql)](https://cwb-graphql-gateway.herokuapp.com/graphiql)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
-[Central Weather Bureau Open Data](https://opendata.cwb.gov.tw/index) (中央氣象局氣象資料開放平臺) GraphQL API Gateway
+[中央氣象局氣象資料開放平臺](https://opendata.cwb.gov.tw/index) (Central Weather Bureau Open Data) GraphQL API Gateway
 
 ## Authorization Key
 
@@ -34,7 +34,7 @@ In order to get data we need to sign up for Central Weather Bureau and sign in t
 * yarn >= v1.3.2
 
 ```bash
-git clone https://github.com/bookshelf/bookshelf.git
+git clone https://github.com/cettoana/cwb-graphql-gateway.git
 yarn install --pure-lockfile
 yarn run watch
 ```
