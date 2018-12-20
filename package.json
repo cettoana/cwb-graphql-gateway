@@ -1,14 +1,14 @@
 {
   "name": "cwb-graphql",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "repository": "https://github.com/cettoana/cwb-graphql.git",
   "author": "Hau Chen <cettoana@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "xo",
-    "watch": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "test": "exit 0",
+    "start": "node dist/index.js",
+    "build": "rm -rf ./dist && tsc"
   },
   "husky": {
     "hooks": {
@@ -16,7 +16,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js}": [
+    "src/**/*.{ts}": [
       "prettier --write",
       "git add"
     ]
@@ -26,32 +26,23 @@
     "singleQuote": true
   },
   "dependencies": {
-    "axios": "^0.17.1",
-    "express": "^4.16.2",
-    "express-graphql": "^0.6.11",
-    "graphql": "^0.11.7",
-    "ramda": "^0.25.0",
-    "xml-js": "^1.5.2"
+    "apollo-datasource-rest": "^0.2.1",
+    "apollo-server": "^2.3.1",
+    "dotenv": "^6.2.0",
+    "graphql": "^14.0.2",
+    "winston": "^3.1.0"
   },
   "devDependencies": {
+    "@types/dotenv": "^6.1.0",
+    "@types/graphql": "^14.0.3",
+    "@types/node": "^10.12.15",
     "husky": "^1.2.1",
     "lint-staged": "^8.1.0",
-    "nodemon": "^1.12.1",
     "prettier": "^1.15.3",
-    "xo": "^0.18.2"
-  },
-  "xo": {
-    "space": true,
-    "rules": {
-      "comma-dangle": [
-        "error",
-        "always-multiline"
-      ],
-      "object-curly-spacing": [
-        "error",
-        "always"
-      ]
-    }
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.2.2"
   },
   "engines": {
     "node": ">=8.9.1"

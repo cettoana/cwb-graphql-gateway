@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-config-prettier",
+    "tslint-plugin-prettier"
+  ],
+  "rules": {
+    "prettier": true
+  }
+}
