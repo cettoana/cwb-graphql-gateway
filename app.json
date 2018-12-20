@@ -14,8 +14,5 @@
       "description": "Enable GraphQL Playground.",
       "value": "true"
     }
-  },
-  "scripts": {
-    "postdeploy": "yarn install --pure-lockfile && yarn build"
   }
 }

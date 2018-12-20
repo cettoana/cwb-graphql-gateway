@@ -8,7 +8,8 @@
   "scripts": {
     "test": "exit 0",
     "start": "node dist/index.js",
-    "build": "rm -rf ./dist && tsc"
+    "build": "rm -rf ./dist && tsc",
+    "heroku-postbuild": "npm run build"
   },
   "husky": {
     "hooks": {
