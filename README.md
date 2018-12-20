@@ -1,14 +1,12 @@
 # CWB Open Data GraphQL API Gateway
 
 [![Build Status](https://travis-ci.org/cettoana/cwb-graphql-gateway.svg?branch=master)](https://travis-ci.org/cettoana/cwb-graphql-gateway)
-[![Heroku](http://heroku-badge.herokuapp.com/?app=cwb-graphql-gateway&style=flat&svg=1&root=graphiql)](https://cwb-graphql-gateway.herokuapp.com/graphiql)
+[![Heroku](http://heroku-badge.herokuapp.com/?app=cwb-graphql-gateway&style=flat&svg=1&root=.well-known/apollo/server-health)](https://cwb-graphql-gateway.herokuapp.com)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](#badge)
 
 [中央氣象局氣象資料開放平臺](https://opendata.cwb.gov.tw/index) (Central Weather Bureau Open Data) GraphQL API Gateway
 
-## Authorization Key
-
-In order to get data we need to sign up for Central Weather Bureau and sign in to get the **authorization key** from [here](https://opendata.cwb.gov.tw/usages)
+Live Demo - [GraphQL Playground](https://cwb-graphql-gateway.herokuapp.com)
 
 ## Implemented API
 
@@ -17,11 +15,15 @@ In order to get data we need to sign up for Central Weather Bureau and sign in t
 | 自動氣象站-氣象觀測資料 | O-A0001-001 |
 | 自動雨量站-雨量觀測資料 | O-A0002-001 |
 
-## DEMO
+## Deploy To Heroku
 
-[GraphiQL](https://cwb-graphql-gateway.herokuapp.com/graphiql)
+Env Variables Required To Run
 
-## Deploy
+- `CWB_API_KEY`
+
+- `PLAYGROUND_ENABLED`
+
+Get Your API Key From [Here](https://opendata.cwb.gov.tw/devManual/insrtuction#getUserAuthkeyAnchor)
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/cettoana/cwb-graphql-gateway/blob/master)
 
@@ -36,7 +38,8 @@ In order to get data we need to sign up for Central Weather Bureau and sign in t
 ```bash
 git clone https://github.com/cettoana/cwb-graphql-gateway.git
 yarn install --pure-lockfile
-yarn run watch
+yarn build
+yarn start
 ```
 
-and browse `http://localhost:4000/graphiql` to show `GraphiQL` page, or get data from API endpoint `http://localhost:4000/graphql`
+and Browse `http://localhost:4000` to Play with GraphQL Playground.
