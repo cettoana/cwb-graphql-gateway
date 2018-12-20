@@ -5,5 +5,17 @@
   "keywords": [
     "Node.js",
     "GraphQL"
-  ]
+  ],
+  "env": {
+    "CWB_API_KEY": {
+      "description": "API key get from CWB open data platform."
+    },
+    "PLAYGROUND_ENABLED":{
+      "description": "Enable GraphQL Playground.",
+      "value": "true"
+    }
+  },
+  "scripts": {
+    "postdeploy": "yarn install --pure-lockfile && yarn build"
+  }
 }

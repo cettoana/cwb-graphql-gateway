@@ -23,7 +23,7 @@ In order to get data we need to sign up for Central Weather Bureau and sign in t
 
 ## Deploy
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/cettoana/cwb-graphql-gateway/blob/master)
 
 ## Developement
 
