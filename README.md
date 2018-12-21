@@ -1,6 +1,8 @@
 # CWB Open Data GraphQL API Gateway
 
 [![Build Status](https://travis-ci.org/cettoana/cwb-graphql-gateway.svg?branch=master)](https://travis-ci.org/cettoana/cwb-graphql-gateway)
+[![Build Status](https://img.shields.io/codecov/c/github/cettoana/cwb-graphql-gateway/master.svg)](https://codecov.io/gh/cettoana/cwb-graphql-gateway/branch/master)
+[![Known Vulnerabilities](https://snyk.io/test/github/cettoana/cwb-graphql-gateway/badge.svg)](https://snyk.io/test/github/cettoana/cwb-graphql-gateway)
 [![Heroku](http://heroku-badge.herokuapp.com/?app=cwb-graphql-gateway&style=flat&svg=1&root=.well-known/apollo/server-health)](https://cwb-graphql-gateway.herokuapp.com)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](#badge)
 
