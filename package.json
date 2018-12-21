@@ -59,6 +59,8 @@
       "/node_modules/",
       "src/__tests__/data/",
       "src/__tests__/helpers/"
-    ]
+    ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
