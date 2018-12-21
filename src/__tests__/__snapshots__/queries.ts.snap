@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`queries query all rainfall observations 1`] = `
+Object {
+  "data": Object {
+    "rainfallObservations": Array [
+      Object {
+        "cumulativeRainfall": Object {
+          "_10min": null,
+          "_24hr": 0,
+        },
+        "station": Object {
+          "id": "C1I230",
+          "name": "九份二山",
+        },
+      },
+      Object {
+        "cumulativeRainfall": Object {
+          "_10min": null,
+          "_24hr": 0,
+        },
+        "station": Object {
+          "id": "466940",
+          "name": "基隆",
+        },
+      },
+      Object {
+        "cumulativeRainfall": Object {
+          "_10min": null,
+          "_24hr": 0,
+        },
+        "station": Object {
+          "id": "466900",
+          "name": "淡水",
+        },
+      },
+      Object {
+        "cumulativeRainfall": Object {
+          "_10min": null,
+          "_24hr": 0,
+        },
+        "station": Object {
+          "id": "466880",
+          "name": "板橋",
+        },
+      },
+      Object {
+        "cumulativeRainfall": Object {
+          "_10min": null,
+          "_24hr": 0,
+        },
+        "station": Object {
+          "id": "466930",
+          "name": "竹子湖",
+        },
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`queries query all weather observations 1`] = `
+Object {
+  "data": Object {
+    "weatherObservations": Array [
+      Object {
+        "station": Object {
+          "id": "CM0010",
+          "name": "花博豐原",
+        },
+        "temperature": 22.7,
+      },
+      Object {
+        "station": Object {
+          "id": "CM0030",
+          "name": "花博外埔",
+        },
+        "temperature": 21.2,
+      },
+      Object {
+        "station": Object {
+          "id": "CM0040",
+          "name": "花博后里",
+        },
+        "temperature": 23.5,
+      },
+      Object {
+        "station": Object {
+          "id": "C0W110",
+          "name": "東莒",
+        },
+        "temperature": 14.5,
+      },
+      Object {
+        "station": Object {
+          "id": "C0W120",
+          "name": "西嶼",
+        },
+        "temperature": null,
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`queries query rainfall observation with station id 1`] = `
+Object {
+  "data": Object {
+    "rainfallObservations": Array [
+      Object {
+        "cumulativeRainfall": Object {
+          "_10min": null,
+          "_24hr": 0,
+        },
+        "station": Object {
+          "id": "466940",
+          "name": "基隆",
+        },
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`queries query weather observation with station id 1`] = `
+Object {
+  "data": Object {
+    "weatherObservations": Array [
+      Object {
+        "station": Object {
+          "id": "CM0030",
+          "name": "花博外埔",
+        },
+        "temperature": 21.2,
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

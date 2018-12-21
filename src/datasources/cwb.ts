@@ -177,13 +177,13 @@ class CwbAPI extends RESTDataSource {
     );
   };
 
-  private fetchWeatherObs = () =>
+  public fetchWeatherObs = () =>
     this.get('O-A0001-001', {
       Authorization: process.env.CWB_API_KEY,
       format: 'JSON',
     });
 
-  private fetchRainfallObs = () =>
+  public fetchRainfallObs = () =>
     this.get('O-A0002-001', {
       Authorization: process.env.CWB_API_KEY,
       format: 'JSON',
