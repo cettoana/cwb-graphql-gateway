@@ -8,8 +8,8 @@ import mockWeatherObsRes from '../data/weatherObsRes';
 
 const createTestServer = () => {
   const cwbAPI = new CwbAPI();
-  cwbAPI.fetchWeatherObs = jest.fn(() => mockWeatherObsRes);
-  cwbAPI.fetchRainfallObs = jest.fn(() => mockRainfallObsRes);
+  cwbAPI.fetchWeatherObs = jest.fn(() => Promise.resolve(mockWeatherObsRes));
+  cwbAPI.fetchRainfallObs = jest.fn(() => Promise.resolve(mockRainfallObsRes));
 
   const server = new ApolloServer({
     dataSources: () => ({
