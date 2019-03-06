@@ -1,4 +1,4 @@
-# CWB Open Data GraphQL API Gateway
+# 中央氣象局氣象資料 GraphQL API Gateway
 
 [![Build Status](https://travis-ci.org/cettoana/cwb-graphql-gateway.svg?branch=master)](https://travis-ci.org/cettoana/cwb-graphql-gateway)
 [![Build Status](https://img.shields.io/codecov/c/github/cettoana/cwb-graphql-gateway/master.svg)](https://codecov.io/gh/cettoana/cwb-graphql-gateway/branch/master)
@@ -12,10 +12,10 @@ Live Demo - [GraphQL Playground](https://cwb-graphql-gateway.herokuapp.com)
 
 ## Implemented API
 
-| Data name | Data ID |
-| :-----------: |:-------------:|
-| 自動氣象站-氣象觀測資料 | O-A0001-001 |
-| 自動雨量站-雨量觀測資料 | O-A0002-001 |
+|        Data name        |    Data ID    |      Query Schema      |
+| :---------------------: | :-----------: | :--------------------: |
+| 自動氣象站-氣象觀測資料 | `O-A0001-001` | `weatherObservations`  |
+| 自動雨量站-雨量觀測資料 | `O-A0002-001` | `rainfallObservations` |
 
 ## Deploy To Heroku
 
