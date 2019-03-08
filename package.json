@@ -1,6 +1,6 @@
 {
   "name": "cwb-graphql",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "index.js",
   "repository": "https://github.com/cettoana/cwb-graphql.git",
   "author": "Hau Chen <cettoana@gmail.com>",

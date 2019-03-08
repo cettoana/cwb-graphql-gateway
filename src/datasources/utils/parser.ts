@@ -13,9 +13,7 @@ interface IParameters {
 
 export interface IElement {
   elementName: string;
-  elementValue: {
-    value: string;
-  };
+  elementValue: string;
 }
 
 interface IWeatherElement {
@@ -47,7 +45,7 @@ interface IRainfallElement {
   NOW?: string;
 }
 
-export const parseParameters: ((p: [IParameter]) => IParameters) = parameters =>
+export const parseParameters: (p: [IParameter]) => IParameters = parameters =>
   parameters.reduce((prev, curr) => {
     const value = curr.parameterValue;
     const key = curr.parameterName;
@@ -63,7 +61,7 @@ const parseElements = (
   validator: (value: string) => boolean
 ): IWeatherElement | IRainfallElement =>
   elements.reduce((prev, curr) => {
-    const value = curr.elementValue.value;
+    const value = curr.elementValue;
 
     if (!validator(value)) {
       return prev;

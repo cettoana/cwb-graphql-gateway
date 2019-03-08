@@ -8,8 +8,12 @@ import {
   parseWeatherElements,
 } from './utils/parser';
 
+export interface IOptions {
+  stationNames?: string[];
+}
+
 interface IObsResponse {
-  cwbopendata: {
+  records: {
     location: [IObsLocation];
   };
 }
@@ -89,13 +93,13 @@ export interface IRainfallObsResult {
 class CwbAPI extends RESTDataSource {
   constructor() {
     super();
-    this.baseURL = 'https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/';
+    this.baseURL = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/';
   }
 
-  public getAllWeatherObs = async () => {
-    const res: IObsResponse = await this.fetchWeatherObs();
+  public getWeatherObs = async (options: IOptions) => {
+    const res: IObsResponse = await this.fetchWeatherObs(options);
 
-    return res.cwbopendata.location.map(
+    return res.records.location.map(
       (l): IWeatherObsResult => {
         const elements = parseWeatherElements(l.weatherElement);
 
@@ -137,10 +141,10 @@ class CwbAPI extends RESTDataSource {
     );
   };
 
-  public getAllRainfallObs = async () => {
-    const res: IObsResponse = await this.fetchRainfallObs();
+  public getRainfallObs = async (options: IOptions) => {
+    const res: IObsResponse = await this.fetchRainfallObs(options);
 
-    return res.cwbopendata.location.map(
+    return res.records.location.map(
       (l): IRainfallObsResult => {
         const elements = parseRainfallElements(l.weatherElement);
 
@@ -177,16 +181,18 @@ class CwbAPI extends RESTDataSource {
     );
   };
 
-  public fetchWeatherObs = () =>
+  public fetchWeatherObs = ({ stationNames }: IOptions) =>
     this.get('O-A0001-001', {
       Authorization: process.env.CWB_API_KEY,
       format: 'JSON',
+      locationName: stationNames && stationNames.join(','),
     });
 
-  public fetchRainfallObs = () =>
+  public fetchRainfallObs = ({ stationNames }: IOptions) =>
     this.get('O-A0002-001', {
       Authorization: process.env.CWB_API_KEY,
       format: 'JSON',
+      locationName: stationNames && stationNames.join(','),
     });
 }
 

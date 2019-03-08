@@ -26,6 +26,18 @@ query {
 }
 `;
 
+const queryWeatherObservationWithStationNames = `
+query {
+  weatherObservations(stationNames: ["西嶼","東莒"]) {
+    station {
+      id
+      name
+    }
+    temperature
+  }
+}
+`;
+
 const queryRainfallObservations = `
 query {
   rainfallObservations {
@@ -44,6 +56,21 @@ query {
 const queryRainfallObservationsWithStationId = `
 query {
   rainfallObservations(stationId: "466940") {
+    station {
+      id
+      name
+    }
+    cumulativeRainfall {
+      _10min
+      _24hr
+    }
+  }
+}
+`;
+
+const queryRainfallObservationsWithStationNames = `
+query {
+  rainfallObservations(stationNames: ["板橋","淡水"]) {
     station {
       id
       name
@@ -75,6 +102,17 @@ describe('queries', () => {
     expect(res).toMatchSnapshot();
   });
 
+  it('query weather observation with location name', async () => {
+    const server = createTestServer();
+    const { query } = createTestClient(server);
+
+    const res = await query({
+      query: queryWeatherObservationWithStationNames,
+    });
+
+    expect(res).toMatchSnapshot();
+  });
+
   it('query all rainfall observations', async () => {
     const server = createTestServer();
     const { query } = createTestClient(server);
@@ -89,6 +127,17 @@ describe('queries', () => {
     const { query } = createTestClient(server);
 
     const res = await query({ query: queryRainfallObservationsWithStationId });
+
+    expect(res).toMatchSnapshot();
+  });
+
+  it('query rainfall observation with location name', async () => {
+    const server = createTestServer();
+    const { query } = createTestClient(server);
+
+    const res = await query({
+      query: queryRainfallObservationsWithStationNames,
+    });
 
     expect(res).toMatchSnapshot();
   });

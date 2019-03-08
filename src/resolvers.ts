@@ -1,4 +1,4 @@
-import CwbAPI from './datasources/cwb';
+import CwbAPI, { IOptions } from './datasources/cwb';
 
 interface IDataSources {
   cwbAPI: CwbAPI;
@@ -8,10 +8,19 @@ export default {
   Query: {
     rainfallObservations: async (
       _: any,
-      { stationId }: { stationId?: string },
+      {
+        stationNames,
+        stationId,
+      }: { stationNames?: string[]; stationId?: string },
       { dataSources }: { dataSources: IDataSources }
     ) => {
-      let results = await dataSources.cwbAPI.getAllRainfallObs();
+      const options: IOptions = {};
+
+      if (stationNames && stationNames.length > 0) {
+        options.stationNames = stationNames;
+      }
+
+      let results = await dataSources.cwbAPI.getRainfallObs(options);
 
       if (stationId) {
         results = results.filter(result => result.station.id === stationId);
@@ -22,10 +31,19 @@ export default {
 
     weatherObservations: async (
       _: any,
-      { stationId }: { stationId?: string },
+      {
+        stationNames,
+        stationId,
+      }: { stationNames?: string[]; stationId?: string },
       { dataSources }: { dataSources: IDataSources }
     ) => {
-      let results = await dataSources.cwbAPI.getAllWeatherObs();
+      const options: IOptions = {};
+
+      if (stationNames && stationNames.length > 0) {
+        options.stationNames = stationNames;
+      }
+
+      let results = await dataSources.cwbAPI.getWeatherObs(options);
 
       if (stationId) {
         results = results.filter(result => result.station.id === stationId);

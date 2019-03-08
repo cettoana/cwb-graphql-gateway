@@ -1,0 +1,503 @@
+{
+  "success": "true",
+  "result": {
+    "resource_id": "O-A0002-001",
+    "fields": [
+      {
+        "id": "lat",
+        "type": "Double"
+      },
+      {
+        "id": "lon",
+        "type": "Double"
+      },
+      {
+        "id": "locationName",
+        "type": "String"
+      },
+      {
+        "id": "stationId",
+        "type": "String"
+      },
+      {
+        "id": "description",
+        "type": "String"
+      },
+      {
+        "id": "elementName",
+        "type": "String"
+      },
+      {
+        "id": "elementValue",
+        "type": "Double"
+      },
+      {
+        "id": "parameterName",
+        "type": "String"
+      },
+      {
+        "id": "parameterValue",
+        "type": "String"
+      }
+    ]
+  },
+  "records": {
+    "location": [
+      {
+        "lat": "24.9994",
+        "lon": "121.4338",
+        "locationName": "板橋",
+        "stationId": "466880",
+        "time": {
+          "obsTime": "2019-03-07 13:20:00"
+        },
+        "weatherElement": [
+          {
+            "elementName": "ELEV",
+            "elementValue": "11.00"
+          },
+          {
+            "elementName": "RAIN",
+            "elementValue": "1.00"
+          },
+          {
+            "elementName": "MIN_10",
+            "elementValue": "0.00"
+          },
+          {
+            "elementName": "HOUR_3",
+            "elementValue": "3.50"
+          },
+          {
+            "elementName": "HOUR_6",
+            "elementValue": "12.00"
+          },
+          {
+            "elementName": "HOUR_12",
+            "elementValue": "15.00"
+          },
+          {
+            "elementName": "HOUR_24",
+            "elementValue": "24.00"
+          },
+          {
+            "elementName": "NOW",
+            "elementValue": "15.00"
+          }
+        ],
+        "parameter": [
+          {
+            "parameterName": "CITY",
+            "parameterValue": "新北市"
+          },
+          {
+            "parameterName": "CITY_SN",
+            "parameterValue": "06"
+          },
+          {
+            "parameterName": "TOWN",
+            "parameterValue": "板橋區"
+          },
+          {
+            "parameterName": "TOWN_SN",
+            "parameterValue": "041"
+          },
+          {
+            "parameterName": "ATTRIBUTE",
+            "parameterValue": "中央氣象局"
+          }
+        ]
+      },
+      {
+        "lat": "23.9517",
+        "lon": "120.8462",
+        "locationName": "九份二山",
+        "stationId": "81I520",
+        "time": {
+          "obsTime": "2019-03-07 13:20:00"
+        },
+        "weatherElement": [
+          {
+            "elementName": "ELEV",
+            "elementValue": "527.00"
+          },
+          {
+            "elementName": "RAIN",
+            "elementValue": "2.50"
+          },
+          {
+            "elementName": "MIN_10",
+            "elementValue": "0.00"
+          },
+          {
+            "elementName": "HOUR_3",
+            "elementValue": "8.50"
+          },
+          {
+            "elementName": "HOUR_6",
+            "elementValue": "9.50"
+          },
+          {
+            "elementName": "HOUR_12",
+            "elementValue": "14.00"
+          },
+          {
+            "elementName": "HOUR_24",
+            "elementValue": "15.50"
+          },
+          {
+            "elementName": "NOW",
+            "elementValue": "14.00"
+          }
+        ],
+        "parameter": [
+          {
+            "parameterName": "CITY",
+            "parameterValue": "南投縣"
+          },
+          {
+            "parameterName": "CITY_SN",
+            "parameterValue": "13"
+          },
+          {
+            "parameterName": "TOWN",
+            "parameterValue": "國姓鄉"
+          },
+          {
+            "parameterName": "TOWN_SN",
+            "parameterValue": "139"
+          },
+          {
+            "parameterName": "ATTRIBUTE",
+            "parameterValue": "農委會水土保持局"
+          }
+        ]
+      },
+      {
+        "lat": "23.9637",
+        "lon": "120.8369",
+        "locationName": "九份二山",
+        "stationId": "C1I230",
+        "time": {
+          "obsTime": "2019-03-07 13:20:00"
+        },
+        "weatherElement": [
+          {
+            "elementName": "ELEV",
+            "elementValue": "837.00"
+          },
+          {
+            "elementName": "RAIN",
+            "elementValue": "3.00"
+          },
+          {
+            "elementName": "MIN_10",
+            "elementValue": "0.50"
+          },
+          {
+            "elementName": "HOUR_3",
+            "elementValue": "10.00"
+          },
+          {
+            "elementName": "HOUR_6",
+            "elementValue": "10.50"
+          },
+          {
+            "elementName": "HOUR_12",
+            "elementValue": "16.00"
+          },
+          {
+            "elementName": "HOUR_24",
+            "elementValue": "19.00"
+          },
+          {
+            "elementName": "NOW",
+            "elementValue": "16.50"
+          }
+        ],
+        "parameter": [
+          {
+            "parameterName": "CITY",
+            "parameterValue": "南投縣"
+          },
+          {
+            "parameterName": "CITY_SN",
+            "parameterValue": "13"
+          },
+          {
+            "parameterName": "TOWN",
+            "parameterValue": "國姓鄉"
+          },
+          {
+            "parameterName": "TOWN_SN",
+            "parameterValue": "139"
+          },
+          {
+            "parameterName": "ATTRIBUTE",
+            "parameterValue": "局屬無人測站"
+          }
+        ]
+      },
+      {
+        "lat": "25.1639",
+        "lon": "121.5363",
+        "locationName": "竹子湖",
+        "stationId": "466930",
+        "time": {
+          "obsTime": "2019-03-07 13:20:00"
+        },
+        "weatherElement": [
+          {
+            "elementName": "ELEV",
+            "elementValue": "607.10"
+          },
+          {
+            "elementName": "RAIN",
+            "elementValue": "0.50"
+          },
+          {
+            "elementName": "MIN_10",
+            "elementValue": "0.00"
+          },
+          {
+            "elementName": "HOUR_3",
+            "elementValue": "4.00"
+          },
+          {
+            "elementName": "HOUR_6",
+            "elementValue": "6.50"
+          },
+          {
+            "elementName": "HOUR_12",
+            "elementValue": "11.00"
+          },
+          {
+            "elementName": "HOUR_24",
+            "elementValue": "21.50"
+          },
+          {
+            "elementName": "NOW",
+            "elementValue": "11.00"
+          }
+        ],
+        "parameter": [
+          {
+            "parameterName": "CITY",
+            "parameterValue": "臺北市"
+          },
+          {
+            "parameterName": "CITY_SN",
+            "parameterValue": "01"
+          },
+          {
+            "parameterName": "TOWN",
+            "parameterValue": "北投區"
+          },
+          {
+            "parameterName": "TOWN_SN",
+            "parameterValue": "006"
+          },
+          {
+            "parameterName": "ATTRIBUTE",
+            "parameterValue": "中央氣象局"
+          }
+        ]
+      },
+      {
+        "lat": "25.1641",
+        "lon": "121.5358",
+        "locationName": "竹子湖",
+        "stationId": "01A420",
+        "time": {
+          "obsTime": "2019-03-07 13:20:00"
+        },
+        "weatherElement": [
+          {
+            "elementName": "ELEV",
+            "elementValue": "600.00"
+          },
+          {
+            "elementName": "RAIN",
+            "elementValue": "1.00"
+          },
+          {
+            "elementName": "MIN_10",
+            "elementValue": "0.00"
+          },
+          {
+            "elementName": "HOUR_3",
+            "elementValue": "5.00"
+          },
+          {
+            "elementName": "HOUR_6",
+            "elementValue": "7.00"
+          },
+          {
+            "elementName": "HOUR_12",
+            "elementValue": "12.00"
+          },
+          {
+            "elementName": "HOUR_24",
+            "elementValue": "23.00"
+          },
+          {
+            "elementName": "NOW",
+            "elementValue": "12.00"
+          }
+        ],
+        "parameter": [
+          {
+            "parameterName": "CITY",
+            "parameterValue": "臺北市"
+          },
+          {
+            "parameterName": "CITY_SN",
+            "parameterValue": "01"
+          },
+          {
+            "parameterName": "TOWN",
+            "parameterValue": "士林區"
+          },
+          {
+            "parameterName": "TOWN_SN",
+            "parameterValue": "007"
+          },
+          {
+            "parameterName": "ATTRIBUTE",
+            "parameterValue": "水利署第10河川局"
+          }
+        ]
+      },
+      {
+        "lat": "25.1667",
+        "lon": "121.4407",
+        "locationName": "淡水",
+        "stationId": "466900",
+        "time": {
+          "obsTime": "2019-03-07 13:20:00"
+        },
+        "weatherElement": [
+          {
+            "elementName": "ELEV",
+            "elementValue": "19.00"
+          },
+          {
+            "elementName": "RAIN",
+            "elementValue": "0.00"
+          },
+          {
+            "elementName": "MIN_10",
+            "elementValue": "0.00"
+          },
+          {
+            "elementName": "HOUR_3",
+            "elementValue": "2.00"
+          },
+          {
+            "elementName": "HOUR_6",
+            "elementValue": "4.00"
+          },
+          {
+            "elementName": "HOUR_12",
+            "elementValue": "6.50"
+          },
+          {
+            "elementName": "HOUR_24",
+            "elementValue": "14.00"
+          },
+          {
+            "elementName": "NOW",
+            "elementValue": "6.50"
+          }
+        ],
+        "parameter": [
+          {
+            "parameterName": "CITY",
+            "parameterValue": "新北市"
+          },
+          {
+            "parameterName": "CITY_SN",
+            "parameterValue": "06"
+          },
+          {
+            "parameterName": "TOWN",
+            "parameterValue": "淡水區"
+          },
+          {
+            "parameterName": "TOWN_SN",
+            "parameterValue": "004"
+          },
+          {
+            "parameterName": "ATTRIBUTE",
+            "parameterValue": "中央氣象局"
+          }
+        ]
+      },
+      {
+        "lat": "25.1351",
+        "lon": "121.7323",
+        "locationName": "基隆",
+        "stationId": "466940",
+        "time": {
+          "obsTime": "2019-03-07 13:20:00"
+        },
+        "weatherElement": [
+          {
+            "elementName": "ELEV",
+            "elementValue": "26.70"
+          },
+          {
+            "elementName": "RAIN",
+            "elementValue": "0.50"
+          },
+          {
+            "elementName": "MIN_10",
+            "elementValue": "0.00"
+          },
+          {
+            "elementName": "HOUR_3",
+            "elementValue": "3.00"
+          },
+          {
+            "elementName": "HOUR_6",
+            "elementValue": "5.00"
+          },
+          {
+            "elementName": "HOUR_12",
+            "elementValue": "8.50"
+          },
+          {
+            "elementName": "HOUR_24",
+            "elementValue": "14.50"
+          },
+          {
+            "elementName": "NOW",
+            "elementValue": "8.50"
+          }
+        ],
+        "parameter": [
+          {
+            "parameterName": "CITY",
+            "parameterValue": "基隆市"
+          },
+          {
+            "parameterName": "CITY_SN",
+            "parameterValue": "03"
+          },
+          {
+            "parameterName": "TOWN",
+            "parameterValue": "仁愛區"
+          },
+          {
+            "parameterName": "TOWN_SN",
+            "parameterValue": "015"
+          },
+          {
+            "parameterName": "ATTRIBUTE",
+            "parameterValue": "中央氣象局"
+          }
+        ]
+      }
+    ]
+  }
+}
