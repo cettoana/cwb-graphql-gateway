@@ -6,38 +6,8 @@ Object {
     "rainfallObservations": Array [
       Object {
         "cumulativeRainfall": Object {
-          "_10min": null,
-          "_24hr": 0,
-        },
-        "station": Object {
-          "id": "C1I230",
-          "name": "九份二山",
-        },
-      },
-      Object {
-        "cumulativeRainfall": Object {
-          "_10min": null,
-          "_24hr": 0,
-        },
-        "station": Object {
-          "id": "466940",
-          "name": "基隆",
-        },
-      },
-      Object {
-        "cumulativeRainfall": Object {
-          "_10min": null,
-          "_24hr": 0,
-        },
-        "station": Object {
-          "id": "466900",
-          "name": "淡水",
-        },
-      },
-      Object {
-        "cumulativeRainfall": Object {
-          "_10min": null,
-          "_24hr": 0,
+          "_10min": 0,
+          "_24hr": 24,
         },
         "station": Object {
           "id": "466880",
@@ -46,12 +16,62 @@ Object {
       },
       Object {
         "cumulativeRainfall": Object {
-          "_10min": null,
-          "_24hr": 0,
+          "_10min": 0,
+          "_24hr": 15.5,
+        },
+        "station": Object {
+          "id": "81I520",
+          "name": "九份二山",
+        },
+      },
+      Object {
+        "cumulativeRainfall": Object {
+          "_10min": 0.5,
+          "_24hr": 19,
+        },
+        "station": Object {
+          "id": "C1I230",
+          "name": "九份二山",
+        },
+      },
+      Object {
+        "cumulativeRainfall": Object {
+          "_10min": 0,
+          "_24hr": 21.5,
         },
         "station": Object {
           "id": "466930",
           "name": "竹子湖",
+        },
+      },
+      Object {
+        "cumulativeRainfall": Object {
+          "_10min": 0,
+          "_24hr": 23,
+        },
+        "station": Object {
+          "id": "01A420",
+          "name": "竹子湖",
+        },
+      },
+      Object {
+        "cumulativeRainfall": Object {
+          "_10min": 0,
+          "_24hr": 14,
+        },
+        "station": Object {
+          "id": "466900",
+          "name": "淡水",
+        },
+      },
+      Object {
+        "cumulativeRainfall": Object {
+          "_10min": 0,
+          "_24hr": 14.5,
+        },
+        "station": Object {
+          "id": "466940",
+          "name": "基隆",
         },
       },
     ],
@@ -72,38 +92,74 @@ Object {
     "weatherObservations": Array [
       Object {
         "station": Object {
+          "id": "C0W120",
+          "name": "西嶼",
+        },
+        "temperature": 16.7,
+      },
+      Object {
+        "station": Object {
           "id": "CM0010",
           "name": "花博豐原",
         },
-        "temperature": 22.7,
+        "temperature": 13.8,
       },
       Object {
         "station": Object {
           "id": "CM0030",
           "name": "花博外埔",
         },
-        "temperature": 21.2,
+        "temperature": 12.8,
       },
       Object {
         "station": Object {
           "id": "CM0040",
           "name": "花博后里",
         },
-        "temperature": 23.5,
+        "temperature": null,
       },
       Object {
         "station": Object {
           "id": "C0W110",
           "name": "東莒",
         },
-        "temperature": 14.5,
+        "temperature": 8.2,
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`queries query rainfall observation with location name 1`] = `
+Object {
+  "data": Object {
+    "rainfallObservations": Array [
+      Object {
+        "cumulativeRainfall": Object {
+          "_10min": 0,
+          "_24hr": 24,
+        },
+        "station": Object {
+          "id": "466880",
+          "name": "板橋",
+        },
       },
       Object {
-        "station": Object {
-          "id": "C0W120",
-          "name": "西嶼",
+        "cumulativeRainfall": Object {
+          "_10min": 0,
+          "_24hr": 14,
         },
-        "temperature": null,
+        "station": Object {
+          "id": "466900",
+          "name": "淡水",
+        },
       },
     ],
   },
@@ -123,13 +179,43 @@ Object {
     "rainfallObservations": Array [
       Object {
         "cumulativeRainfall": Object {
-          "_10min": null,
-          "_24hr": 0,
+          "_10min": 0,
+          "_24hr": 14.5,
         },
         "station": Object {
           "id": "466940",
           "name": "基隆",
         },
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`queries query weather observation with location name 1`] = `
+Object {
+  "data": Object {
+    "weatherObservations": Array [
+      Object {
+        "station": Object {
+          "id": "C0W120",
+          "name": "西嶼",
+        },
+        "temperature": 16.7,
+      },
+      Object {
+        "station": Object {
+          "id": "C0W110",
+          "name": "東莒",
+        },
+        "temperature": 8.2,
       },
     ],
   },
@@ -152,7 +238,7 @@ Object {
           "id": "CM0030",
           "name": "花博外埔",
         },
-        "temperature": 21.2,
+        "temperature": 12.8,
       },
     ],
   },

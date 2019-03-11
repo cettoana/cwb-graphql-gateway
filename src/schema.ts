@@ -2,8 +2,14 @@ import { gql } from 'apollo-server';
 
 const typeDefs = gql`
   type Query {
-    weatherObservations(stationId: String): [WeatherObservation]!
-    rainfallObservations(stationId: String): [RainfallObservation]!
+    weatherObservations(
+      stationId: String
+      stationNames: [String]
+    ): [WeatherObservation]!
+    rainfallObservations(
+      stationId: String
+      stationNames: [String]
+    ): [RainfallObservation]!
   }
 
   type WeatherObservation {

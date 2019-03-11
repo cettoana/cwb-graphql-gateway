@@ -1,6 +1,6 @@
 {
   "name": "cwb-graphql",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "index.js",
   "repository": "https://github.com/cettoana/cwb-graphql.git",
   "author": "Hau Chen <cettoana@gmail.com>",
@@ -32,12 +32,14 @@
     "apollo-server-testing": "^2.3.1",
     "dotenv": "^6.2.0",
     "graphql": "^14.0.2",
+    "nock": "^10.0.6",
     "winston": "^3.1.0"
   },
   "devDependencies": {
     "@types/dotenv": "6.1.0",
     "@types/graphql": "14.0.7",
     "@types/jest": "24.0.11",
+    "@types/nock": "^9.3.1",
     "@types/node": "10.12.30",
     "husky": "1.3.1",
     "jest": "24.3.1",

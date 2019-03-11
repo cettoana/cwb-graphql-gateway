@@ -8,8 +8,12 @@ import {
   parseWeatherElements,
 } from './utils/parser';
 
+export interface IOptions {
+  stationNames?: string[];
+}
+
 interface IObsResponse {
-  cwbopendata: {
+  records: {
     location: [IObsLocation];
   };
 }
@@ -86,16 +90,21 @@ export interface IRainfallObsResult {
   };
   attribute?: string;
 }
+
+interface IURLSearchParams {
+  [key: string]: string | undefined;
+}
+
 class CwbAPI extends RESTDataSource {
   constructor() {
     super();
-    this.baseURL = 'https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/';
+    this.baseURL = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/';
   }
 
-  public getAllWeatherObs = async () => {
-    const res: IObsResponse = await this.fetchWeatherObs();
+  public getWeatherObs = async (options: IOptions) => {
+    const res: IObsResponse = await this.fetchWeatherObs(options);
 
-    return res.cwbopendata.location.map(
+    return res.records.location.map(
       (l): IWeatherObsResult => {
         const elements = parseWeatherElements(l.weatherElement);
 
@@ -137,10 +146,10 @@ class CwbAPI extends RESTDataSource {
     );
   };
 
-  public getAllRainfallObs = async () => {
-    const res: IObsResponse = await this.fetchRainfallObs();
+  public getRainfallObs = async (options: IOptions) => {
+    const res: IObsResponse = await this.fetchRainfallObs(options);
 
-    return res.cwbopendata.location.map(
+    return res.records.location.map(
       (l): IRainfallObsResult => {
         const elements = parseRainfallElements(l.weatherElement);
 
@@ -177,17 +186,31 @@ class CwbAPI extends RESTDataSource {
     );
   };
 
-  public fetchWeatherObs = () =>
-    this.get('O-A0001-001', {
+  public fetchWeatherObs = ({ stationNames }: IOptions) => {
+    const query: IURLSearchParams = {
       Authorization: process.env.CWB_API_KEY,
       format: 'JSON',
-    });
+    };
 
-  public fetchRainfallObs = () =>
-    this.get('O-A0002-001', {
+    if (stationNames) {
+      query.locationName = stationNames.join(',');
+    }
+
+    return this.get('O-A0001-001', query);
+  };
+
+  public fetchRainfallObs = ({ stationNames }: IOptions) => {
+    const query: IURLSearchParams = {
       Authorization: process.env.CWB_API_KEY,
       format: 'JSON',
-    });
+    };
+
+    if (stationNames) {
+      query.locationName = stationNames.join(',');
+    }
+
+    return this.get('O-A0002-001', query);
+  };
 }
 
 export default CwbAPI;
