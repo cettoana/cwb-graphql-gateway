@@ -90,6 +90,11 @@ export interface IRainfallObsResult {
   };
   attribute?: string;
 }
+
+interface IURLSearchParams {
+  [key: string]: string | undefined;
+}
+
 class CwbAPI extends RESTDataSource {
   constructor() {
     super();
@@ -181,19 +186,31 @@ class CwbAPI extends RESTDataSource {
     );
   };
 
-  public fetchWeatherObs = ({ stationNames }: IOptions) =>
-    this.get('O-A0001-001', {
+  public fetchWeatherObs = ({ stationNames }: IOptions) => {
+    const query: IURLSearchParams = {
       Authorization: process.env.CWB_API_KEY,
       format: 'JSON',
-      locationName: stationNames && stationNames.join(','),
-    });
+    };
 
-  public fetchRainfallObs = ({ stationNames }: IOptions) =>
-    this.get('O-A0002-001', {
+    if (stationNames) {
+      query.locationName = stationNames.join(',');
+    }
+
+    return this.get('O-A0001-001', query);
+  };
+
+  public fetchRainfallObs = ({ stationNames }: IOptions) => {
+    const query: IURLSearchParams = {
       Authorization: process.env.CWB_API_KEY,
       format: 'JSON',
-      locationName: stationNames && stationNames.join(','),
-    });
+    };
+
+    if (stationNames) {
+      query.locationName = stationNames.join(',');
+    }
+
+    return this.get('O-A0002-001', query);
+  };
 }
 
 export default CwbAPI;
