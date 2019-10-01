@@ -43,7 +43,7 @@
     "@types/node": "10.14.10",
     "husky": "2.7.0",
     "jest": "24.8.0",
-    "lint-staged": "9.3.0",
+    "lint-staged": "9.4.1",
     "prettier": "1.18.2",
     "ts-jest": "24.0.2",
     "tslint": "5.18.0",
