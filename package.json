@@ -27,7 +27,7 @@
     "singleQuote": true
   },
   "dependencies": {
-    "apollo-datasource-rest": "^0.5.0",
+    "apollo-datasource-rest": "^0.15.0",
     "apollo-server": "^2.3.1",
     "apollo-server-testing": "^2.3.1",
     "dotenv": "^8.0.0",
